@@ -7,7 +7,11 @@ const closeModal = () => {
 
     const headingApp = document.getElementById('modal-heading-app');
     const typeInput = document.getElementById('app-type');
+    const nameInput = document.getElementById('app-name');
+    const linkInput = document.getElementById('app-link');
 
     headingApp.innerText = '';
     typeInput.value = '';
+    nameInput.value = '';
+    linkInput.value = '';
 };
