@@ -7,7 +7,8 @@
     "dependencies": {
         "dotenv": "^16.3.1",
         "express": "^4.18.2",
-        "nunjucks": "^3.2.4"
+        "nunjucks": "^3.2.4",
+        "sass": "^1.69.5"
     },
     "description": "A Unified app to access FB-AUTO and X-AUTO apps from one interface.",
     "devDependencies": {
@@ -19,7 +20,8 @@
     "private": true,
     "scripts": {
         "start": "node .",
-        "start:dev": "nodemon -e js,html"
+        "start:dev": "nodemon -e js,html",
+        "start:sass": "sass --watch scss:public/css"
     },
     "version": "0.4.1"
 }
