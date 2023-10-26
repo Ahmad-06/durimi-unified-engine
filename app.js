@@ -2,6 +2,7 @@ require('dotenv').config();
 
 const njk = require('nunjucks');
 const express = require('express');
+const bodyParser = require('body-parser');
 
 const seedDB = require('./data/seedDB');
 
@@ -18,6 +19,9 @@ njk.configure('./views', {
 app.set('view engine', 'html');
 
 app.use(express.static('./public'));
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(require('./router/router'));
 
