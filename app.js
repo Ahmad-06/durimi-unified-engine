@@ -3,9 +3,13 @@ require('dotenv').config();
 const njk = require('nunjucks');
 const express = require('express');
 
+const seedDB = require('./data/seedDB');
+
 const app = express();
 const PORT = process.env.UNIFIED_PORT || 49500;
 const HOST = process.env.UNIFIED_HOST || '127.0.0.1';
+
+seedDB();
 
 njk.configure('./views', {
     express: app,
