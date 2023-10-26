@@ -131,3 +131,6 @@ dist
 
 # Sass-generated files.
 public/css
+
+# SQLite3 Databases
+*.db
