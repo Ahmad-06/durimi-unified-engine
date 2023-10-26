@@ -15,10 +15,6 @@ app.set('view engine', 'html');
 
 app.use(express.static('./public'));
 
-app.get('/', (req, res) => {
-    res.render('home/home');
-});
-
 app.use(require('./router/router'));
 
 app.listen(PORT, () => {
