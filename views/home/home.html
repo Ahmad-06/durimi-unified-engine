@@ -32,13 +32,13 @@
                     <!-- THE FACEBOOK TAB -->
                     <section class="tab" id="facebook">
                         <h2 class="tab-heading">Facebook</h2>
-                        <button class="create-switch" onclick="createLink('facebook')">Create Link</button>
+                        <button class="create-switch" onclick="openModal('facebook')">Create Link</button>
                     </section>
 
                     <!-- THE TWITTER TAB -->
                     <section class="tab hidden" id="twitter">
                         <h2 class="tab-heading">Twitter</h2>
-                        <button class="create-switch" onclick="createLink('twitter')">Create Link</button>
+                        <button class="create-switch" onclick="openModal('twitter')">Create Link</button>
                     </section>
                 </section>
             </div>
@@ -71,6 +71,9 @@
             <!-- THE SCRIPTS -->
             <script src="/js/home/switchTab.js"></script>
             <script src="/js/home/toggleSidebar.js"></script>
+
+            <script src="/js/home/openModal.js"></script>
+            <script src="/js/home/closeModal.js"></script>
         </div>
     </body>
 </html>
