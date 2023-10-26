@@ -4,7 +4,9 @@
         "name": "Ahmad Shahzad",
         "url": "https://shahzad.dev"
     },
-    "dependencies": {},
+    "dependencies": {
+        "dotenv": "^16.3.1"
+    },
     "description": "A Unified app to access FB-AUTO and X-AUTO apps from one interface.",
     "devDependencies": {},
     "license": "MIT",
