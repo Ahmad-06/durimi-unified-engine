@@ -19,6 +19,8 @@ app.get('/', (req, res) => {
     res.render('home/home');
 });
 
+app.use(require('./router/router'));
+
 app.listen(PORT, () => {
     console.log(`Unified Engine is listening at: http://${HOST}:${PORT}`);
 });
