@@ -8,13 +8,16 @@
         "dotenv": "^16.3.1"
     },
     "description": "A Unified app to access FB-AUTO and X-AUTO apps from one interface.",
-    "devDependencies": {},
+    "devDependencies": {
+        "nodemon": "^3.0.1"
+    },
     "license": "MIT",
     "main": "app.js",
     "name": "unified-engine",
     "private": true,
     "scripts": {
-        "start": "node ."
+        "start": "node .",
+        "start:dev": "nodemon -e js,html"
     },
     "version": "0.1.0"
 }
