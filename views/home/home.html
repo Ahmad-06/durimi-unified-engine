@@ -53,6 +53,20 @@
                 <h2>Content</h2>
             </main>
 
+            <!-- THE OVERLAY -->
+            <div id="overlay"></div>
+            <div id="modal-create">
+                <h3 id="modal-heading">Create <span id="modal-heading-app"></span> Link</h3>
+                <section id="modal-fields">
+                    <input type="text" name="name" id="app-name" placeholder="App Indicator" />
+                    <input type="url" name="link" id="app-link" placeholder="http(s)://(www.)example.org" />
+                </section>
+                <section id="modal-buttons">
+                    <button id="modal-button-cancel" onclick="closeModal()">Cancel</button>
+                    <button id="modal-button-create" onclick="createLink()">Create</button>
+                </section>
+            </div>
+
             <!-- THE SCRIPTS -->
             <script src="/js/home/switchTab.js"></script>
             <script src="/js/home/toggleSidebar.js"></script>
