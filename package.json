@@ -23,5 +23,5 @@
         "start:dev": "nodemon -e js,html",
         "start:sass": "sass --watch scss:public/css"
     },
-    "version": "0.4.1"
+    "version": "0.5.6"
 }
