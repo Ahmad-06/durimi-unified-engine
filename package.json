@@ -1,0 +1,18 @@
+{
+    "author": {
+        "email": "ahmad@shahzad.dev",
+        "name": "Ahmad Shahzad",
+        "url": "https://shahzad.dev"
+    },
+    "dependencies": {},
+    "description": "A Unified app to access FB-AUTO and X-AUTO apps from one interface.",
+    "devDependencies": {},
+    "license": "MIT",
+    "main": "app.js",
+    "name": "unified-engine",
+    "private": true,
+    "scripts": {
+        "start": "node ."
+    },
+    "version": "0.0.1"
+}
