@@ -92,7 +92,7 @@
             </main>
 
             <!-- THE OVERLAY -->
-            <div id="overlay" class="hidden"></div>
+            <div id="overlay" class=""></div>
             <div id="modal-create" class="hidden">
                 <h3 id="modal-heading">Create <span id="modal-heading-app"></span> Link</h3>
                 <input type="text" name="type" id="app-type" class="hidden" />
@@ -132,6 +132,24 @@
                     <button class="modal-button-cancel" onclick="closeModal('edit')">Cancel</button>
                     <button class="modal-button-edit" onclick="editLink()">Edit</button>
                 </section>
+            </div>
+
+            <!-- THE RE-ORDER -->
+            <div id="modal-re-order">
+                <!-- THE HEADING -->
+                <h3 class="modal-heading">Re-Order <span class="modal-heading-type"></span> Links</h3>
+
+                <!-- THE BUTTONS -->
+                <section class="modal-buttons">
+                    <!-- THE CANCEL BUTTON -->
+                    <button class="modal-re-order-cancel" onclick="closeModal('re-order')">Cancel</button>
+
+                    <!-- THE SAVE BUTTON -->
+                    <button class="modal-re-order-save" onclick="savePostOrder()">Save</button>
+                </section>
+
+                <!-- THE APPS -->
+                <section class="modal-apps"></section>
             </div>
 
             <!-- THE SCRIPTS -->

@@ -452,4 +452,76 @@ body {
             }
         }
     }
+
+    #modal-re-order {
+        width: 100%;
+        max-width: 500px;
+        height: 100%;
+        max-height: calc(100vh - 50px);
+
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        background-color: $dark;
+        border: 5px solid $blue;
+
+        z-index: 10;
+
+        padding: 25px;
+
+        gap: 25px;
+        display: flex;
+        flex-direction: column;
+
+        .modal-heading {
+            font-size: 24px;
+            font-weight: bolder;
+            color: $blue;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .modal-buttons {
+            gap: 25px;
+            display: flex;
+            flex-direction: row;
+
+            height: 50px;
+            width: 100%;
+
+            button {
+                width: 100%;
+                color: $blue;
+                border: 3px solid $blue;
+                background-color: $dark;
+                font-weight: bolder;
+                font-size: 18px;
+                text-transform: uppercase;
+                cursor: pointer;
+
+                &:hover {
+                    color: $dark;
+                    background-color: $blue;
+                    box-shadow: -3px -3px $light;
+
+                    &:active {
+                        box-shadow: none;
+                        transform: translate(-3px, -3px);
+                    }
+                }
+
+                &.modal-re-order-cancel {
+                    color: $red;
+                    border-color: $red;
+
+                    &:hover {
+                        color: $dark;
+                        background-color: $red;
+                    }
+                }
+            }
+        }
+    }
 }
