@@ -44,7 +44,7 @@
                             <article
                                 class="app {% if app.id == app_active.id %}active{% endif %}"
                                 id="app-{{ app.id }}"
-                                onclick="switchFrame('{{ app.link }}', '{{ app.name }}', '{{ app.id }}')">
+                                onclick="switchFrame('{{ app.id }}', '{{ app.name }}', '{{ app.link }}')">
                                 <section class="app-icon">
                                     <i class="fa-brands fa-{{app.type}}{% if app.type == 'facebook' %}-f{% endif %}">
                                     </i>
@@ -118,6 +118,8 @@
 
             <script src="/js/home/createLink.js"></script>
             <script src="/js/home/deleteLink.js"></script>
+
+            <script src="/js/home/switchFrame.js"></script>
 
             <script src="/js/home/openDeleteModal.js"></script>
         </div>
