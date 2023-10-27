@@ -220,8 +220,11 @@ body {
             color: $yellow;
             font-size: 20px;
             cursor: pointer;
+            display: none;
 
             @media screen and (max-width: 1000px) {
+                display: initial;
+
                 left: 25px;
 
                 &.active {
