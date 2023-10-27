@@ -147,13 +147,9 @@ body {
                             }
 
                             &.active {
-                                color: $green;
                                 border-color: $green;
-
-                                &:hover {
-                                    color: $black;
-                                    background-color: $green;
-                                }
+                                color: $black;
+                                background-color: $green;
                             }
 
                             .app-icon {
