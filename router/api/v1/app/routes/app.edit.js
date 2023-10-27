@@ -205,3 +205,59 @@ EDIT.put('/', async (req, res) => {
         }
     }
 });
+
+EDIT.put('/order', async (req, res) => {
+    const db = await openDB();
+
+    const apps = req?.body?.apps ? req?.body?.apps : null;
+
+    let errored_out = false;
+
+    if (apps !== null) {
+        for (let i = 0; i < apps.length; i++) {
+            const app = apps[i];
+
+            const query = `
+                UPDATE
+                    apps
+                SET
+                    priority = ?
+                WHERE
+                    id = ?;
+            `;
+            const params = [app.priority, app.id];
+
+            try {
+                await db.run(query, params);
+            } catch (err) {
+                if (err) {
+                    await db.close();
+
+                    errored_out = true;
+
+                    break;
+                }
+            }
+        }
+    }
+
+    if (errored_out) {
+        return res.status(500).json({
+            success: false,
+            data: null,
+            error: {
+                code: 500,
+                type: 'Internal server error.',
+                route: '/api/v1/app/edit/order',
+                moment: 'Updating order.',
+                error: err.toString(),
+            },
+        });
+    } else {
+        return res.json({
+            success: true,
+            data: null,
+            error: null,
+        });
+    }
+});

@@ -67,7 +67,7 @@
 
                 <!-- THE SETTINGS -->
                 <section id="settings">
-                    <button id="settings-button" onclick="orderItems()">
+                    <button id="settings-button" onclick="orderItems('{{ enview }}')">
                         <i class="fa-solid fa-gear"></i>
                     </button>
 
@@ -92,7 +92,7 @@
             </main>
 
             <!-- THE OVERLAY -->
-            <div id="overlay" class=""></div>
+            <div id="overlay" class="hidden"></div>
             <div id="modal-create" class="hidden">
                 <h3 id="modal-heading">Create <span id="modal-heading-app"></span> Link</h3>
                 <input type="text" name="type" id="app-type" class="hidden" />
@@ -135,7 +135,7 @@
             </div>
 
             <!-- THE RE-ORDER -->
-            <div id="modal-re-order">
+            <div id="modal-re-order" class="hidden">
                 <!-- THE HEADING -->
                 <h3 class="modal-heading">Re-Order <span class="modal-heading-type"></span> Links</h3>
 
@@ -145,7 +145,7 @@
                     <button class="modal-re-order-cancel" onclick="closeModal('re-order')">Cancel</button>
 
                     <!-- THE SAVE BUTTON -->
-                    <button class="modal-re-order-save" onclick="savePostOrder()">Save</button>
+                    <button class="modal-re-order-save" onclick="saveAppOrder()">Save</button>
                 </section>
 
                 <!-- THE APPS -->
@@ -169,6 +169,7 @@
             <script src="/js/home/openDeleteModal.js"></script>
 
             <script src="/js/home/editItems.js"></script>
+            <script src="/js/home/orderItems.js"></script>
         </div>
     </body>
 </html>

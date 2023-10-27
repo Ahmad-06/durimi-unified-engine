@@ -455,7 +455,7 @@ body {
 
     #modal-re-order {
         width: 100%;
-        max-width: 500px;
+        max-width: 450px;
         height: 100%;
         max-height: calc(100vh - 50px);
 
@@ -519,6 +519,56 @@ body {
                     &:hover {
                         color: $dark;
                         background-color: $red;
+                    }
+                }
+            }
+        }
+
+        .modal-apps {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+
+            .re-order-app {
+                display: grid;
+                grid-gap: 25px;
+                grid-template-columns: 50px 1fr;
+
+                .re-order-app-buttons {
+                    display: grid;
+                    grid-template-rows: 1fr 1fr;
+                    grid-gap: 10px;
+
+                    button {
+                        height: 20px;
+                        border: none;
+                        line-height: 19px;
+                        color: $blue;
+                        box-shadow: 0 0 0 2px $blue;
+                        background-color: $dark;
+                        cursor: pointer;
+
+                        &:hover {
+                            color: $black;
+                            background-color: $blue;
+                        }
+                    }
+                }
+
+                .re-order-app-content {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: $yellow;
+                    border: 3px solid $yellow;
+                    padding: 0 25px;
+                    max-width: 365px;
+
+                    .re-order-app-content-name {
+                        max-width: calc(100% - 50px);
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
                     }
                 }
             }

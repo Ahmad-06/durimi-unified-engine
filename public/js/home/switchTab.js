@@ -1,4 +1,4 @@
-const switchTab = (tabID) => {
+const switchTab = async (tabID) => {
     const tabs = document.querySelectorAll('.tab');
 
     for (let i = 0; i < tabs.length; i++) {
@@ -14,4 +14,7 @@ const switchTab = (tabID) => {
         switche.classList.remove('active');
         if (switche.getAttribute('data-switch-id') === tabID) switche.classList.add('active');
     }
+
+    const settingsButton = document.getElementById('settings-button');
+    settingsButton.setAttribute('onclick', `orderItems('${tabID}')`);
 };
