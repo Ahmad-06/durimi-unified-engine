@@ -1,11 +1,11 @@
 const express = require('express');
 
-const CREATE = express.Router();
-module.exports = CREATE;
+const DELETE = express.Router();
+module.exports = DELETE;
 
 const openDB = require('../../../../../data/openDB');
 
-CREATE.delete('/', async (req, res) => {
+DELETE.delete('/', async (req, res) => {
     const db = await openDB();
 
     const id = req?.body?.id ? parseInt(req?.body?.id) : null;
