@@ -20,6 +20,18 @@ body {
             height: 100%;
             border-right: 2px solid $border;
 
+            @media screen and (max-width: 1000px) {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                bottom: 0;
+                background-color: $dark;
+
+                &.active {
+                    left: 0;
+                }
+            }
+
             #header {
                 height: 75px;
                 width: 100%;
@@ -203,11 +215,25 @@ body {
             width: 50px;
             left: 375px;
             top: 100px;
-            background-color: transparent;
+            background-color: $dark;
             border: 3px solid $yellow;
             color: $yellow;
             font-size: 20px;
             cursor: pointer;
+
+            @media screen and (max-width: 1000px) {
+                left: 25px;
+
+                &.active {
+                    left: 275px;
+                }
+            }
+
+            @media screen and (max-width: 350px) {
+                &.active {
+                    left: calc(100% - 75px);
+                }
+            }
 
             &:hover {
                 background-color: $yellow;
