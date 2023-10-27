@@ -71,6 +71,7 @@ body {
                     gap: 25px;
                     display: flex;
                     flex-direction: column;
+                    height: calc(100vh - 75px - 50px);
 
                     .tab-heading {
                         text-align: center;
@@ -103,6 +104,95 @@ body {
                             }
                         }
                     }
+
+                    .app-container {
+                        gap: 25px;
+                        display: flex;
+                        flex-direction: column;
+
+                        height: 100%;
+
+                        overflow: auto;
+
+                        &::-webkit-scrollbar {
+                            display: none;
+                        }
+
+                        .app {
+                            height: 50px;
+                            width: 100%;
+                            background-color: $black;
+                            display: grid;
+                            grid-template-columns: 50px auto;
+                            border: 3px solid $yellow;
+                            color: $yellow;
+                            cursor: pointer;
+                            position: relative;
+
+                            &:hover {
+                                color: $black;
+                                background-color: $yellow;
+                            }
+
+                            &.active {
+                                color: $green;
+                                border-color: $green;
+
+                                &:hover {
+                                    color: $black;
+                                    background-color: $green;
+                                }
+                            }
+
+                            .app-icon {
+                                height: calc(50px - 6px);
+                                width: calc(50px - 6px);
+                                font-size: 24px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            }
+
+                            .app-details {
+                                height: calc(50px - 6px);
+
+                                .app-name,
+                                .app-link {
+                                    max-width: 190px;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                }
+
+                                .app-name {
+                                    font-size: 16px;
+                                }
+
+                                .app-link {
+                                    font-size: 12px;
+                                }
+                            }
+
+                            .app-delete {
+                                width: 50px;
+                                height: 50px;
+                                color: $red;
+                                background-color: $black;
+                                border: none;
+                                cursor: pointer;
+                                font-size: 20px;
+                                border: 3px solid $red;
+                                position: absolute;
+                                top: -3px;
+                                right: -3px;
+
+                                &:hover {
+                                    color: $light;
+                                    background-color: $red;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -112,7 +202,7 @@ body {
             height: 50px;
             width: 50px;
             left: 375px;
-            top: 25px;
+            top: 80px;
             background-color: transparent;
             border: 3px solid $yellow;
             color: $yellow;

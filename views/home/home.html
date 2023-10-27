@@ -41,14 +41,17 @@
                         <section class="app-container">
                             <!-- THE APP LOOP -->
                             {% for app in apps %} {% if app.type == type %}
-                            <article class="app" onclick="switchFrame('{{ app.link }}', '{{ app.name }}')">
+                            <article
+                                class="app"
+                                id="app-{{ app.id }}"
+                                onclick="switchFrame('{{ app.link }}', '{{ app.name }}', '{{ app.id }}')">
                                 <section class="app-icon">
                                     <i class="fa-brands fa-{{app.type}}{% if app.type == 'facebook' %}-f{% endif %}">
                                     </i>
                                 </section>
                                 <section class="app-details">
-                                    <h3>{{ app.name }}</h3>
-                                    <p>{{ app.link }}</p>
+                                    <h3 class="app-name">{{ app.name }}</h3>
+                                    <p class="app-link">{{ app.link }}</p>
                                 </section>
                                 <button class="app-delete" onclick="deleteLink('{{ app.id }}')">
                                     <i class="fa-regular fa-trash-can"></i>
