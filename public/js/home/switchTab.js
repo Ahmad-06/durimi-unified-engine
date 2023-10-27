@@ -14,4 +14,12 @@ const switchTab = (tabID) => {
         switche.classList.remove('active');
         if (switche.getAttribute('data-switch-id') === tabID) switche.classList.add('active');
     }
+
+    const settingsButton = document.querySelector('#settings-button a');
+    const editButton = document.querySelector('#edit-button a');
+
+    settingsButton.setAttribute('href', `/settings/${tabID}`);
+    settingsButton.setAttribute('title', `Change ${tabID[0].toUpperCase() + tabID.slice(1)} order.`);
+    editButton.setAttribute('href', `/settings/edit/${tabID}`);
+    editButton.setAttribute('title', `Edit ${tabID[0].toUpperCase() + tabID.slice(1)} items.`);
 };

@@ -68,13 +68,13 @@
                 <!-- THE SETTINGS -->
                 <section id="settings">
                     <button id="settings-button">
-                        <a href="/settings">
+                        <a href="/settings/{{ enview }}" title="Change {{ enview | title }} order.">
                             <i class="fa-solid fa-gear"></i>
                         </a>
                     </button>
 
                     <button id="edit-button">
-                        <a href="/settings/edit">
+                        <a href="/settings/edit/{{ enview }}" title="Edit {{ enview | title }} items.">
                             <i class="fa-regular fa-pen-to-square"></i>
                         </a>
                     </button>
