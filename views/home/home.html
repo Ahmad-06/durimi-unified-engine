@@ -22,7 +22,7 @@
                             class="switch {% if type == enview %}active{% endif %}"
                             data-switch-id="{{ type }}"
                             onclick="switchTab('{{ type }}')">
-                            <i class="fa-brands fa-{{ type }}"></i>
+                            <i class="fa-brands fa-{{ type }}{% if type == 'facebook' %}-f{% endif %}"></i>
                         </button>
                         {% endfor %}
                     </section>
@@ -36,6 +36,26 @@
                     <section class="tab {% if type != enview %}hidden{% endif %}" id="{{ type }}">
                         <h2 class="tab-heading">{{ type | upper }}</h2>
                         <button class="create-switch" onclick="openModal('{{ type }}')">Create Link</button>
+
+                        <!-- THE APP CONTAINER -->
+                        <section class="app-container">
+                            <!-- THE APP LOOP -->
+                            {% for app in apps %} {% if app.type == type %}
+                            <article class="app" onclick="switchFrame('{{ app.link }}', '{{ app.name }}')">
+                                <section class="app-icon">
+                                    <i class="fa-brands fa-{{app.type}}{% if app.type == 'facebook' %}-f{% endif %}">
+                                    </i>
+                                </section>
+                                <section class="app-details">
+                                    <h3>{{ app.name }}</h3>
+                                    <p>{{ app.link }}</p>
+                                </section>
+                                <button class="app-delete" onclick="deleteLink('{{ app.id }}')">
+                                    <i class="fa-regular fa-trash-can"></i>
+                                </button>
+                            </article>
+                            {% endif %} {% endfor %}
+                        </section>
                     </section>
                     {% endfor %}
                 </section>
