@@ -185,7 +185,8 @@ body {
                                 }
                             }
 
-                            .app-delete {
+                            .app-delete,
+                            .app-edit {
                                 width: 50px;
                                 height: 50px;
                                 color: $red;
@@ -201,6 +202,16 @@ body {
                                 &:hover {
                                     color: $light;
                                     background-color: $red;
+                                }
+                            }
+
+                            .app-edit {
+                                color: $blue;
+                                border-color: $blue;
+
+                                &:hover {
+                                    color: $dark;
+                                    background-color: $blue;
                                 }
                             }
                         }
@@ -241,6 +252,16 @@ body {
 
                         a {
                             color: $dark;
+                        }
+                    }
+
+                    &.active {
+                        color: $green;
+                        border-color: $green;
+
+                        &:hover {
+                            color: $dark;
+                            background-color: $green;
                         }
                     }
                 }
@@ -308,7 +329,8 @@ body {
         }
 
         #modal-create,
-        #modal-delete {
+        #modal-delete,
+        #modal-edit {
             width: calc(100% - 50px);
             max-width: 400px;
             padding: 25px;
@@ -405,6 +427,20 @@ body {
 
             .modal-buttons {
                 .modal-button-delete {
+                    color: $red;
+                    border-color: $red;
+
+                    &:hover {
+                        color: $black;
+                        background-color: $red;
+                    }
+                }
+            }
+        }
+
+        #modal-edit {
+            .modal-buttons {
+                .modal-button-cancel {
                     color: $red;
                     border-color: $red;
 
