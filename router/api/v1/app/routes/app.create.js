@@ -10,8 +10,6 @@ const { isValidURL } = require('../../../../../utils/utils');
 CREATE.post('/', async (req, res) => {
     const db = await openDB();
 
-    console.log(req.body);
-
     const type = req?.body?.type ? req?.body?.type : null;
     const name = req?.body?.name ? req?.body?.name : null;
     const link = req?.body?.link ? req?.body?.link : null;

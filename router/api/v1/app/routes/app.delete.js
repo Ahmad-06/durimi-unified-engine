@@ -10,8 +10,6 @@ CREATE.delete('/', async (req, res) => {
 
     const id = req?.body?.id ? parseInt(req?.body?.id) : null;
 
-    console.log(id);
-
     // Validate user input.
     if (id === null || isNaN(id) || id <= 0) {
         await db.close();
