@@ -53,7 +53,9 @@
                                     <h3 class="app-name">{{ app.name }}</h3>
                                     <p class="app-link">{{ app.link }}</p>
                                 </section>
-                                <button class="app-delete" onclick="deleteLink('{{ app.id }}')">
+                                <button
+                                    class="app-delete"
+                                    onclick="openDeleteModal('{{ app.id }}', '{{ app.name }}', '{{ app.link }}')">
                                     <i class="fa-regular fa-trash-can"></i>
                                 </button>
                             </article>
@@ -88,8 +90,22 @@
                     <input type="url" name="link" id="app-link" placeholder="http(s)://(www.)example.org" />
                 </section>
                 <section id="modal-buttons">
-                    <button id="modal-button-cancel" onclick="closeModal()">Cancel</button>
+                    <button id="modal-button-cancel" onclick="closeModal('create')">Cancel</button>
                     <button id="modal-button-create" onclick="createLink()">Create</button>
+                </section>
+            </div>
+
+            <!-- THE DELETE -->
+            <div id="modal-delete" class="hidden">
+                <h3 class="modal-heading">Delete Link</h3>
+                <input type="text" name="id" id="delete-app-id" class="hidden" />
+                <section class="modal-fields">
+                    <input type="text" name="name" id="delete-app-name" placeholder="App Indicator" />
+                    <input type="url" name="link" id="delete-app-link" placeholder="http(s)://(www.)example.org" />
+                </section>
+                <section class="modal-buttons">
+                    <button class="modal-button-cancel" onclick="closeModal('delete')">Cancel</button>
+                    <button class="modal-button-delete" onclick="deleteLink()">Delete</button>
                 </section>
             </div>
 
@@ -101,6 +117,8 @@
             <script src="/js/home/closeModal.js"></script>
 
             <script src="/js/home/createLink.js"></script>
+
+            <script src="/js/home/openDeleteModal.js"></script>
         </div>
     </body>
 </html>

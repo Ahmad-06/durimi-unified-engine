@@ -266,7 +266,8 @@ body {
             z-index: 5;
         }
 
-        #modal-create {
+        #modal-create,
+        #modal-delete {
             width: calc(100% - 50px);
             max-width: 400px;
             padding: 25px;
@@ -285,13 +286,14 @@ body {
             display: flex;
             flex-direction: column;
 
-            #modal-heading {
+            #modal-heading,
+            .modal-heading {
                 text-align: center;
                 font-size: 24px;
-                margin-bottom: 25px;
             }
 
-            #modal-fields {
+            #modal-fields,
+            .modal-fields {
                 gap: 25px;
                 display: flex;
                 flex-direction: column;
@@ -315,7 +317,8 @@ body {
                 }
             }
 
-            #modal-buttons {
+            #modal-buttons,
+            .modal-buttons {
                 gap: 25px;
                 display: flex;
                 flex-direction: row;
@@ -351,6 +354,22 @@ body {
                             color: $black;
                             background-color: $red;
                         }
+                    }
+                }
+            }
+        }
+
+        #modal-delete {
+            border-color: $red;
+
+            .modal-buttons {
+                .modal-button-delete {
+                    color: $red;
+                    border-color: $red;
+
+                    &:hover {
+                        color: $black;
+                        background-color: $red;
                     }
                 }
             }

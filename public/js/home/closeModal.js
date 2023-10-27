@@ -1,6 +1,6 @@
-const closeModal = () => {
+const closeModal = (id) => {
     const overlay = document.getElementById('overlay');
-    const modal = document.getElementById('modal-create');
+    const modal = document.getElementById(`modal-${id}`);
 
     overlay.classList.add('hidden');
     modal.classList.add('hidden');
