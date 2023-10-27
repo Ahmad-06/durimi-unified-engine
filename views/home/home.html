@@ -15,31 +15,29 @@
                 <header id="header">
                     <!-- THE SWITCHES -->
                     <section id="switches">
-                        <!-- THE FACEBOOK SWITCH -->
-                        <button class="switch active" data-switch-id="facebook" onclick="switchTab('facebook')">
-                            <i class="fa-brands fa-facebook-f"></i>
+                        <!-- THE SWITCH LOOP -->
+                        {% for type in types %}
+                        <!-- THE {{ type | upper }} SWITCH -->
+                        <button
+                            class="switch {% if type == enview %}active{% endif %}"
+                            data-switch-id="{{ type }}"
+                            onclick="switchTab('{{ type }}')">
+                            <i class="fa-brands fa-{{ type }}"></i>
                         </button>
-
-                        <!-- THE TWITTER SWITCH -->
-                        <button class="switch" data-switch-id="twitter" onclick="switchTab('twitter')">
-                            <i class="fa-brands fa-twitter"></i>
-                        </button>
+                        {% endfor %}
                     </section>
                 </header>
 
                 <!-- THE TABS -->
                 <section id="tabs">
-                    <!-- THE FACEBOOK TAB -->
-                    <section class="tab" id="facebook">
-                        <h2 class="tab-heading">Facebook</h2>
-                        <button class="create-switch" onclick="openModal('facebook')">Create Link</button>
+                    <!-- THE TAB LOOP -->
+                    {% for type in types %}
+                    <!-- THE {{ type | upper }} TAB -->
+                    <section class="tab {% if type != enview %}hidden{% endif %}" id="{{ type }}">
+                        <h2 class="tab-heading">{{ type | upper }}</h2>
+                        <button class="create-switch" onclick="openModal('{{ type }}')">Create Link</button>
                     </section>
-
-                    <!-- THE TWITTER TAB -->
-                    <section class="tab hidden" id="twitter">
-                        <h2 class="tab-heading">Twitter</h2>
-                        <button class="create-switch" onclick="openModal('twitter')">Create Link</button>
-                    </section>
+                    {% endfor %}
                 </section>
             </div>
 
