@@ -83,7 +83,7 @@ body {
                     gap: 25px;
                     display: flex;
                     flex-direction: column;
-                    height: calc(100vh - 75px - 50px);
+                    height: calc(100vh - 75px - 50px - 76px);
 
                     .tab-heading {
                         text-align: center;
@@ -203,6 +203,44 @@ body {
                                     background-color: $red;
                                 }
                             }
+                        }
+                    }
+                }
+            }
+
+            #settings {
+                height: 76px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 25px;
+                border-top: 1px solid $border;
+
+                button {
+                    height: 50px;
+                    width: 50px;
+                    color: $blue;
+                    border: 3px solid $blue;
+                    background-color: $dark;
+                    cursor: pointer;
+
+                    a {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 100%;
+                        width: 100%;
+                        color: $blue;
+                        text-decoration: none;
+                    }
+
+                    &:hover {
+                        color: $dark;
+                        background-color: $blue;
+
+                        a {
+                            color: $dark;
                         }
                     }
                 }
